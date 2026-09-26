@@ -6,4 +6,21 @@ from django.http import HttpResponse
 def index(request):
     return render(request , 'shop/index.html')
 
+def about(request):
+    return HttpResponse("this is about")
 
+
+def tracker(request):
+    return HttpResponse("this is tracker")
+
+def search(request):
+    return HttpResponse("this is search")
+
+def prodview(request):
+    return HttpResponse("this is prodview")
+
+def checkout(request):
+    return HttpResponse("this is checkout")
+
+def contact(request):
+    return HttpResponse("this is contact")
