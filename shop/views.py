@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 from django.http import HttpResponse
+from .models import Product
 
 # Create your views here.
 def index(request):
@@ -24,3 +25,7 @@ def checkout(request):
 
 def contact(request):
     return HttpResponse("this is contact")
+
+def displaydbData(request):
+    products = Product.objects.all()
+    return render(request  , 'shop/display.html' , {'products' : 'products'})

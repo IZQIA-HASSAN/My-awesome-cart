@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for product in products %}
+  <div>
+    <img src="{{ product.image.url }}" width="200" alt="{{ product.product_name }}">
+    <h3>{{ product.product_name }}</h3>
+    <p>{{ product.category }} / {{ product.subcategory }}</p>
+    <p>{{ product.desc }}</p>
+    <p>Price: Rs. {{ product.price }}</p>
+    <p>Published: {{ product.pub_date }}</p>
+  </div>
+{% empty %}
+  <p>No products yet.</p>
+{% endfor %}
+    
+</body>
+</html>
