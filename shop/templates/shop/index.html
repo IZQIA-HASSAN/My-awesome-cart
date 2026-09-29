@@ -8,7 +8,7 @@
 <div class="container" xmlns:data="http://www.w3.org/1999/xhtml">
     <!--        slideshow starts here-->
     {% for product, range, nSlides in allProds %}
-    <h1>Men's Fashion</h1>
+    <h1>{{product.0.category}}</h1>
     <div id="demo" class="carousel slide my-3" data-ride="carousel">'
         <ul class="carousel-indicators">
             <li data-target="#demo" data-slide-to="0" class="active"></li>
