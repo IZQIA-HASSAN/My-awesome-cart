@@ -6,13 +6,13 @@ from math import ceil
 
 # Create your views here.
 def index(request):
-    products = list(Product.objects.all())
-    # products = list(products.objects.filter(price__lt=500))
+    products= Product.objects.all()
+    n= len(products)
+    nSlides= n//4 + ceil((n/4)-(n//4))
+    allProds=[[products, range(1, len(products)), nSlides],[products, range(1, len(products)), nSlides]]
+    params={'allProds':allProds }
+    return render(request,"shop/index.html", params)
 
-    # group products into slides of 3
-    slides = [products[i:i + 3] for i in range(0, len(products), 3)]
-
-    return render(request, 'shop/index.html', {'slides': slides})
    
 
 def about(request):
