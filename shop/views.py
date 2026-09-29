@@ -8,7 +8,7 @@ def index(request):
     return render(request , 'shop/index.html')
 
 def about(request):
-    return HttpResponse("this is about")
+    return render(request , "shop/about.html" )
 
 
 def tracker(request):
