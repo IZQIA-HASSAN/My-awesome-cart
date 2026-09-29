@@ -1,167 +1,64 @@
-{%extends 'shop/basic.html'%}
+{% extends 'shop/basic.html' %}
 
-  {% block css %}
-    .card-img-top {
-      height: 200px;
-      object-fit: cover;
-    }
+{% block css %}
 
-    /* blue indicators */
-    .carousel-indicators [data-bs-target] {
-      background-color: blue;
-    }
+{% endblock %}
 
-    /* blue arrows */
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background-color: blue;
-      border-radius: 50%;
-      background-size: 60%;
-    }
- {% endblock %}
+{% block body %}
+<div class="container my-4">
 
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-{%block body%}
- {% load static %}
-  <div class="container my-4">
-
-    <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-      <!-- indicators -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-
-      <!-- slides -->
-      <div class="carousel-inner px-5 pb-5">
-
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="row g-3">
-            <div class="col-md-4">
-              <div class="card h-100">
-                <img src="{% static 'shop/test.jpg' %}" class="card-img-top" alt="Product 1">
-                <div class="card-body">
-                  <h5 class="card-title">Product 1</h5>
-                  <p class="card-text">Some quick example text for this product.</p>
-                  <a href="#" class="btn btn-primary">Add to cart</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card h-100">
-                <img src="test.jpg" class="card-img-top" alt="Product 2">
-                <div class="card-body">
-                  <h5 class="card-title">Product 2</h5>
-                  <p class="card-text">Some quick example text for this product.</p>
-                  <a href="#" class="btn btn-primary">Add to cart</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card h-100">
-                <img src="test.jpg" class="card-img-top" alt="Product 3">
-                <div class="card-body">
-                  <h5 class="card-title">Product 3</h5>
-                  <p class="card-text">Some quick example text for this product.</p>
-                  <a href="#" class="btn btn-primary">Add to cart</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <div class="row g-3">
-            <div class="col-md-4">
-              <div class="card h-100">
-                <img src="test.jpg" class="card-img-top" alt="Product 4">
-                <div class="card-body">
-                  <h5 class="card-title">Product 4</h5>
-                  <p class="card-text">Some quick example text for this product.</p>
-                  <a href="#" class="btn btn-primary">Add to cart</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card h-100">
-                <img src="test.jpg" class="card-img-top" alt="Product 5">
-                <div class="card-body">
-                  <h5 class="card-title">Product 5</h5>
-                  <p class="card-text">Some quick example text for this product.</p>
-                  <a href="#" class="btn btn-primary">Add to cart</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card h-100">
-                <img src="test.jpg" class="card-img-top" alt="Product 6">
-                <div class="card-body">
-                  <h5 class="card-title">Product 6</h5>
-                  <p class="card-text">Some quick example text for this product.</p>
-                  <a href="#" class="btn btn-primary">Add to cart</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="carousel-item">
-          <div class="row g-3">
-            <div class="col-md-4">
-              <div class="card h-100">
-                <img src="test.jpg" class="card-img-top" alt="Product 7">
-                <div class="card-body">
-                  <h5 class="card-title">Product 7</h5>
-                  <p class="card-text">Some quick example text for this product.</p>
-                  <a href="#" class="btn btn-primary">Add to cart</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card h-100">
-                <img src="test.jpg" class="card-img-top" alt="Product 8">
-                <div class="card-body">
-                  <h5 class="card-title">Product 8</h5>
-                  <p class="card-text">Some quick example text for this product.</p>
-                  <a href="#" class="btn btn-primary">Add to cart</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card h-100">
-                <img src="test.jpg" class="card-img-top" alt="Product 9">
-                <div class="card-body">
-                  <h5 class="card-title">Product 9</h5>
-                  <p class="card-text">Some quick example text for this product.</p>
-                  <a href="#" class="btn btn-primary">Add to cart</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- prev / next controls (inside the carousel div) -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-
+    <!-- indicators: one per slide -->
+    <div class="carousel-indicators">
+      {% for slide in slides %}
+      <button type="button" data-bs-target="#demo"
+              data-bs-slide-to="{{ forloop.counter0 }}"
+              {% if forloop.first %}class="active" aria-current="true"{% endif %}
+              aria-label="Slide {{ forloop.counter }}"></button>
+      {% endfor %}
     </div>
+
+    <!-- slides -->
+    <div class="carousel-inner px-5 pb-5">
+      {% for slide in slides %}
+      <div class="carousel-item {% if forloop.first %}active{% endif %}">
+        <div class="row g-3">
+
+          {% for product in slide %}
+          <div class="col-md-4">
+            <div class="card h-100">
+              {% if product.image %}
+                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.product_name }}">
+              {% endif %}
+              <div class="card-body">
+                <h5 class="card-title">{{ product.product_name }}</h5>
+                <p class="card-text">{{ product.desc }}</p>
+                <p class="fw-bold">Rs. {{ product.price }}</p>
+                <p class="card-text">{{product.category}}</p>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+      {% empty %}
+      <p class="text-center">No products available.</p>
+      {% endfor %}
+    </div>
+
+    <!-- prev / next controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
   </div>
-
-  <!-- diaplying databse data -->
- {%endblock%}
-  
-
- 
+</div>
+{% endblock %}

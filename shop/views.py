@@ -2,10 +2,18 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 from .models import Product
+from math import ceil
 
 # Create your views here.
 def index(request):
-    return render(request , 'shop/index.html')
+    products = list(Product.objects.all())
+    # products = list(products.objects.filter(price__lt=500))
+
+    # group products into slides of 3
+    slides = [products[i:i + 3] for i in range(0, len(products), 3)]
+
+    return render(request, 'shop/index.html', {'slides': slides})
+   
 
 def about(request):
     return render(request , "shop/about.html" )

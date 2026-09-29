@@ -8,7 +8,23 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <style>
-      {% block css %} {%endblock%}
+      .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* blue indicators */
+.carousel-indicators [data-bs-target] {
+  background-color: blue;
+}
+
+/* blue arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: blue;
+  border-radius: 50%;
+  background-size: 60%;
+}
   </style>
 </head>
 
